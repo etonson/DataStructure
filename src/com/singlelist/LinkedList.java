@@ -3,6 +3,14 @@ package com.singlelist;
 public class LinkedList {
 	private Node first;
 
+	public static void main(String[] args) {
+		LinkedList obj = new LinkedList();
+		obj.addLast(40);
+		obj.addLast(50);
+		obj.addLast(60);
+		obj.show();
+	}
+
 	public void addLast(int value) {
 		Node current, newNode;
 		newNode = new Node(value);
@@ -30,6 +38,7 @@ public class LinkedList {
 				break;
 			}
 			currentNode = currentNode.next;
+
 		}
 		if (currentNode == null) {
 			System.out.println(String.format("串列中沒有結點 [%d] ", special));
@@ -42,20 +51,19 @@ public class LinkedList {
 
 	public void insertAt(int data, int pos) {
 		Node newNode;
-		int j;
 		if (pos == 1) {
 			addHead(data);
 		} else {
-			Node ptr = first;
-			for (j = 1; j < pos - 1 && ptr != null; j++) {
-				ptr = ptr.next;
-			}
-			if (ptr == null) {
-				System.out.println(String.format("只有 [%d] 可插入", j));
-			} else {
-				newNode = new Node(data);
-				newNode.next = ptr.next;
-				ptr.next = newNode;
+			Node currentNode = first;
+			for (int j = 1; j < pos - 1 && currentNode != null; j++) {
+				currentNode = currentNode.next;
+				if (currentNode == null) {
+					System.out.println(String.format("只有位置<%d>可插入", j));
+				} else {
+					newNode = new Node(data);
+					newNode.next = currentNode.next;
+					currentNode.next = newNode;
+				}
 			}
 		}
 	}
@@ -68,22 +76,22 @@ public class LinkedList {
 	}
 
 	public void removeLast() {
-		Node ptr = first;
+		Node currentNode = first;
 		if (first == null) {
 			System.out.println("串列是空的!");
 		} else if (first.next == null) {
 			first = null;
 		} else {
-			while (ptr.next != null) {
-				ptr = ptr.next;
+			while (currentNode.next != null) {
+				currentNode = currentNode.next;
 			}
-			ptr.next = null;
+			currentNode.next = null;
 		}
 	}
 
 	public void removeAt(int data) {
 		if (first == null) {
-			System.out.println("串列是空的!");
+			System.out.println("串列是空的");
 		}
 		if (first.item == data) {
 			first = first.next;
@@ -96,15 +104,23 @@ public class LinkedList {
 				ptr = ptr.next;
 			}
 			if (ptr.next == null) {
-				System.out.println(String.format("串列無此節點[%d]", data));
+				System.out.println(String.format("無此節點<%d>可插入", data));
 			} else {
 				ptr.next = ptr.next.next;
 			}
 		}
 	}
 
-	public static void main(String[] args) {
-		LinkedList list = new LinkedList();
-		System.out.println(list.first.item);
+	public void show() {
+		Node ptr = first;
+		if (ptr == null) {
+			System.out.println("鏈結串列為空");
+			System.out.println(1);
+			return;
+		}
+		while (ptr != null) {
+			System.out.println(ptr);
+			ptr = ptr.next;
+		}
 	}
 }
