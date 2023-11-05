@@ -1,10 +1,10 @@
-package com.singlelist;
+package linkedStructure;
 
 public class Node {
-	public int item;
-	public Node next;
+	int item;
+	Node next;
 
-	public Node(int data) {
+	Node(int data) {
 		this.item = data;
 		this.next = null;
 	}
@@ -14,4 +14,5 @@ public class Node {
 		return "Node [item=" + item + ", next=" + next + "]";
 	}
 	
+
 }
