@@ -1,1 +1,4 @@
 *.class
+.classpath
+Thumbs.db
+ehthumbs.db
