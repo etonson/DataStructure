@@ -11,7 +11,6 @@ public static void main(String[] args) {
 		System.out.println(d);
 		System.out.println(DateUtil.formatDate(new Date()));
 	} catch (ParseException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 }

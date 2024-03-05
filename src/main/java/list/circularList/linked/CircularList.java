@@ -1,4 +1,4 @@
-package list.circularList;
+package list.circularList.linked;
 
 public class CircularList {
 	private Node first;

@@ -1,4 +1,4 @@
-package list.circularList;
+package list.circularList.linked;
 
 public class Node {
 	public int item;

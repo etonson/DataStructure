@@ -1,4 +1,4 @@
-package list.circularList;
+package list.circularList.linked;
 
 public class TestCircularList {
 	public static void main(String[] args) {
