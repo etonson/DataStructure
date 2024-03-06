@@ -29,7 +29,7 @@ public class ArrayForQueue {
 			return -1;
 		} else {
 			size--;
-			++front;
+			front++;
 			return list[front];
 		}
 	}
@@ -37,9 +37,9 @@ public class ArrayForQueue {
 	public void display() {
 		for (int j = front; j < CAPACITY + front; j++)
 		{
-			System.out.println(String.format("%4d", list[j % size]));
+			System.out.printf("%4d%n", list[j % size]);
 		}
-		System.out.println(String.format("Front<%d>, Rear<%d>, Count = %d%n", front, rear, CAPACITY));
+		System.out.printf("Front<%d>, Rear<%d>, Count = %d%n%n", front, rear, CAPACITY);
 	}
 
 	public int getRear() {
