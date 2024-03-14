@@ -21,12 +21,12 @@ public class LinkedForQueue {
     }
 
     //定義方法來移除佇列項目
-    public int Dequeue(){
+    public int dequeue() {
         int number;
         Node current = front;  //指向目前節點的參考為頂端節點
         if (front == null) throw
                 new IllegalStateException("空白佇列");
-        else{
+        else {
             //佇列有節點的情形下才做刪除
             //取得刪除節點的值給變數number儲存
             number = front.item;
@@ -37,7 +37,8 @@ public class LinkedForQueue {
     }
 
     //定義方法回傳佇列前端項目
-    public int Peek(){
+
+    public int peek() {
         if (front == null) throw
                 new IllegalStateException("空白佇列");
         return front.item;

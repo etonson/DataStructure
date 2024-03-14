@@ -13,6 +13,4 @@ public class Node {
 	public String toString() {
 		return "Node [item=" + item + ", next=" + next + "]";
 	}
-	
-
 }

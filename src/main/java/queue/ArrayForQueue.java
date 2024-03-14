@@ -2,6 +2,11 @@ package queue;
 
 import java.util.Arrays;
 
+/**
+ *    @author : eton.lin
+ *    @description 透過陣列方式實作equeue
+ *    @date 2024/3/15
+*/
 public class ArrayForQueue {
 	int[] list;
 	private int rear, front, size;
@@ -13,10 +18,13 @@ public class ArrayForQueue {
 		this.rear = 0;
 		this.front = 0;
 	}
+	public boolean isEmpty() {
+		return (size==0);
+	}
 
 	public void enqueue(int data) {
 		if (rear == CAPACITY) {
-			System.out.println("佇列已滿，無法再加入。");
+			System.out.println("queue is full");
 		} else {
 			list[rear] = data;
 			rear++;
@@ -24,13 +32,14 @@ public class ArrayForQueue {
 		}
 	}
 
-	public int dequeue() {
+public int dequeue() {
 		if (isEmpty()) {
 			return -1;
 		} else {
+			int result = list[front];
 			size--;
 			front++;
-			return list[front];
+			return result;
 		}
 	}
 
@@ -46,9 +55,6 @@ public class ArrayForQueue {
 		return rear;
 	}
 
-	public void setRear(int rear) {
-		this.rear = rear;
-	}
 
 	public int getFront() {
 		return front;
@@ -70,9 +76,6 @@ public class ArrayForQueue {
 		return CAPACITY;
 	}
 
-	public boolean isEmpty() {
-		return (CAPACITY == size);
-	}
 
 	@Override
 	public String toString() {
