@@ -25,10 +25,16 @@ public class BinarySearchTree {
 
             while (true) {
                 if (values[i] < ptr.getValue()) {
-                    ptr.setLeftNode(newNode);
+                    if (ptr.getLeftNode() == null) {
+                        ptr.setLeftNode(newNode);
+                        break;
+                    }
                     ptr = ptr.getLeftNode();
                 } else {
-                    ptr.setRightNode(newNode);
+                    if (ptr.getRightNode() == null) {
+                        ptr.setRightNode(newNode);
+                        break;
+                    }
                     ptr = ptr.getRightNode();
                 }
             }
