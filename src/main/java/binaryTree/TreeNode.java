@@ -10,71 +10,50 @@ public class TreeNode<E> {
     private E value;
     private TreeNode<E> leftNode;
     private TreeNode<E> rightNode;
+    private int height;
+
+    public void initNode(E v, TreeNode<E> leftNode, TreeNode<E> rightNode, int height) {
+        this.value = v;
+        this.rightNode = rightNode;
+        this.leftNode = leftNode;
+        this.height = height;
+    }
 
     public TreeNode(E value) {
         this.value = value;
     }
 
-    //前序走訪
-    //樹根->左子樹->右子樹
-    public void preOrder() {
-        System.out.print(value);
-
-        if (leftNode != null) {
-            leftNode.preOrder();
-        }
-
-        if (rightNode != null) {
-            rightNode.preOrder();
-        }
-    }
-
-    //中序走訪
-    //左子樹->樹根->右子樹
-    public void inOrder() {
-        if (leftNode != null) {
-            leftNode.inOrder();
-        }
-        System.out.print(value);
-        if (rightNode != null) {
-            rightNode.inOrder();
-        }
-    }
-
-    //後序走訪
-    //左子樹->右子樹->樹根
-    public void postOrder() {
-        if (leftNode != null) {
-            leftNode.postOrder();
-        }
-        if (rightNode != null) {
-            rightNode.postOrder();
-        }
-        System.out.print(value);
+    public int getHeight() {
+        return height;
     }
 
     public E getValue() {
         return value;
     }
 
-    public void setValue(E value) {
-        this.value = value;
-    }
-
-    public TreeNode<E> getLeftNode() {
-        return leftNode;
+    public TreeNode<E> getRightNode() {
+        return rightNode;
     }
 
     public void setLeftNode(TreeNode<E> leftNode) {
         this.leftNode = leftNode;
     }
 
-    public TreeNode<E> getRightNode() {
-        return rightNode;
-    }
 
     public void setRightNode(TreeNode<E> rightNode) {
         this.rightNode = rightNode;
+    }
+
+    public TreeNode<E> getLeftNode() {
+        return leftNode;
+    }
+
+    public void setValue(E value) {
+        this.value = value;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     @Override
