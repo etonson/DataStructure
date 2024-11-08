@@ -1,11 +1,10 @@
 package binaryTree;
 
-/**
- * @author : eton.lin
- * @description TODO
- * @date 2024-04-25 下午 10:51
- */
-
+/*
+  @author : eton.lin
+  @description TODO
+  @date 2024-04-25 下午 10:51
+*/
 public class AVLTreeTest {
     private static int arr[] = {55, 50, 70, 40, 45};
 

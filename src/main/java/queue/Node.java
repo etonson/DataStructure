@@ -1,9 +1,9 @@
 package queue;
 
-/**
- * @author : eton.lin
- * @description 節點
- * @date 2024-03-05 下午 11:27
+/*
+  @author : eton.lin
+  @description 節點
+  @date 2024-03-05 下午 11:27
  */
 //定義鏈結串列的節點
 class Node{

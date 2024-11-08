@@ -1,11 +1,11 @@
 package binaryTree;
 
-/**
- * @author : eton.lin
- * @description TODO
- * @reference:https://www.cnblogs.com/skywang12345/p/3577479.html
- * @date 2024-04-20 下午 02:33
- */
+/*
+  @author : eton.lin
+  @description TODO
+  @reference:https://www.cnblogs.com/skywang12345/p/3577479.html
+  @date 2024-04-20 下午 02:33
+*/
 
 public class AVLTree<T extends Comparable<T>> {
     private AVLTreeNode<T> mRoot;    // 根結點

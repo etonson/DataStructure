@@ -1,10 +1,10 @@
 package trees;
 
-/**
- * @author : eton.lin
- * @description TODO
- * @date 2024-04-10 下午 10:28
- */
+/*
+  @author : eton.lin
+  @description TODO
+  @date 2024-04-10 下午 10:28
+*/
 public class ArrayTree {
     public static void main(String[] args) {
         char[] fbTree = new char[16];

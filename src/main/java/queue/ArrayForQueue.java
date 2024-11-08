@@ -2,10 +2,10 @@ package queue;
 
 import java.util.Arrays;
 
-/**
- *    @author : eton.lin
- *    @description 透過陣列方式實作equeue
- *    @date 2024/3/15
+/*
+     @author : eton.lin
+     @description 透過陣列方式實作equeue
+     @date 2024/3/15
 */
 public class ArrayForQueue {
 	int[] list;

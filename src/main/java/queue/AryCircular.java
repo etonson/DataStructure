@@ -2,10 +2,10 @@ package queue;
 
 import java.util.Arrays;
 
-/**
- * @author : eton.lin
- * @description 環狀結構
- * @date 2024-03-07 下午 11:19
+/*
+  @author : eton.lin
+  @description 環狀結構
+  @date 2024-03-07 下午 11:19
  */
 public class AryCircular {
     int maxSize;

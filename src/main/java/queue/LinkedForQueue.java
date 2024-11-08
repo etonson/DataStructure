@@ -1,9 +1,9 @@
 package queue;
 
-/**
- * @author : eton.lin
- * @description 透過linked方式建構queue結構
- * @date 2024-03-05 下午 11:23
+/*
+  @author : eton.lin
+  @description 透過linked方式建構queue結構
+  @date 2024-03-05 下午 11:23
  */
 public class LinkedForQueue {
     private Node front, rear;
