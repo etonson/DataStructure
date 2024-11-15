@@ -8,12 +8,12 @@ import lombok.Data;
     @date 2024-10-24 上午 12:46
 */
 @Data
-public class Node {
-    public int item;                //資料欄
+public class Node<T> {
+    public T item;                //資料欄
     public int balance;             //平衡係數
     public Node lNext, rNink;       //指向前一個、下一個節點鏈結
 
-    Node(int data){   //定義建構式 - 傳入數值
+    Node(T data){   //定義建構式 - 傳入數值
         this.item = data;
         this.balance = 0;
         this.lNext = null;
