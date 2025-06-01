@@ -1,10 +1,10 @@
 package list.linkedStructure;
 
-public class Node {
-	public int item;
-	public Node next;
+public class Node<T> {
+	public T item;
+	public Node<T> next;
 
-	public Node(int data) {
+	public Node(T data) {
 		this.item = data;
 		this.next = null;
 	}

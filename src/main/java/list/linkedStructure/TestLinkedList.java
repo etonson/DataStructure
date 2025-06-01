@@ -1,6 +1,7 @@
 package list.linkedStructure;
 
 
+import java.util.List;
 
 public class TestLinkedList {
 
@@ -13,6 +14,6 @@ public class TestLinkedList {
 		l1.addLast(15);
 		l1.addLast(20);
 //		l1.insertBehind(200, 15);
-		System.out.println(l1.toString());
+		System.out.println(l1);
 	}
 }

@@ -1,11 +1,16 @@
 package list.linkedStructure;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class LinkedList {
-	Node first;
+	Node<Integer> first;
 
 	public void addLast(int value) {
-		Node currentNode, newNode;
-		newNode = new Node(value);
+		Node<Integer> currentNode, newNode;
+		newNode = new Node<>(value);
 		if (first == null) {
 			first = newNode;
 		} else {
@@ -18,13 +23,13 @@ public class LinkedList {
 	}
 
 	public void addHead(int value) {
-		Node newNode = new Node(value);
+		Node<Integer> newNode = new Node<>(value);
 		newNode.next = first;
 		first = newNode;
 	}
 
 	public void insertBehind(int data, int special) {
-		Node ptr = first;
+		Node<Integer> ptr = first;
 		while (ptr != null) {
 			if (ptr.item == special) {
 				break;
@@ -34,7 +39,7 @@ public class LinkedList {
 		if (ptr == null) {
 			System.out.println("串列中沒有結點");
 		} else {
-			Node newNode = new Node(data);
+			Node<Integer> newNode = new Node<>(data);
 			newNode.next = ptr.next;
 			ptr.next = newNode;
 		}
@@ -42,19 +47,19 @@ public class LinkedList {
 	}
 
 	public void insertAt(int data, int pos) {
-		Node newNode;
+		Node<Integer> newNode;
 		int j;
 		if (pos == 1) {
 			addHead(data);
 		} else {
-			Node ptr = first;
+			Node<Integer> ptr = first;
 			for (j = 1; j < pos - 1 && ptr != null; j++) {
 				ptr = ptr.next;
 			}
 			if (ptr == null) {
 				System.out.println("no node");
 			} else {
-				newNode = new Node(data);
+				newNode = new Node<>(data);
 				newNode.next = ptr.next;
 				ptr.next = newNode;
 			}
@@ -75,7 +80,7 @@ public class LinkedList {
 		} else if (first.next == null) {
 			first = null;
 		} else {
-			Node ptr = first;
+			Node<Integer> ptr = first;
 			while (ptr.next != null) {
 				ptr = ptr.next;
 			}
@@ -89,7 +94,7 @@ public class LinkedList {
 		} else if (first.next == null) {
 			first = null;
 		} else {
-			Node ptr = first;
+			Node<Integer> ptr = first;
 			while (ptr.next != null) {
 				if (ptr.next.item == data) {
 					break;
@@ -105,7 +110,7 @@ public class LinkedList {
 	}
 
 	public void revertNode() {
-		Node previous = null, current;
+		Node<Integer> previous = null, current;
 		while (first != null) {
 			current = first;
 			first = current.next;
@@ -118,14 +123,6 @@ public class LinkedList {
 	@Override
 	public String toString() {
 		return "LinkedList [first=" + first + "]";
-	}
-
-	public Node getFirst() {
-		return first;
-	}
-
-	public void setFirst(Node first) {
-		this.first = first;
 	}
 
 }

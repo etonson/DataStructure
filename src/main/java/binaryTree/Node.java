@@ -9,14 +9,15 @@ import lombok.Data;
 */
 @Data
 public class Node<T> {
-    public T item;                //資料欄
-    public int balance;             //平衡係數
-    public Node lNext, rNink;       //指向前一個、下一個節點鏈結
+    T item;
+    Node<T> lNext;
+    Node<T> rNink;
+    int balance;  // For AVL balancing
 
-    Node(T data){   //定義建構式 - 傳入數值
-        this.item = data;
-        this.balance = 0;
+    public Node(T item) {
+        this.item = item;
         this.lNext = null;
         this.rNink = null;
+        this.balance = 0;
     }
 }
